@@ -1,7 +1,3 @@
-<!--
-THIS WEBSITE IS PART OF VLIFE PROJECT
-ALL RIGHTS ARE RESERVED TO THOMAS 'tholeb' LEBRETON - ANY COPY OR DISTRIBUTION OF THIS WEBSITE IS STRICTLY PROHIBITED
- -->
 <?php
 header('Content-Type: text/html; charset=utf-8');
 $fileName = basename(__FILE__);
