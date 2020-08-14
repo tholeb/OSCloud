@@ -5,7 +5,7 @@
     </svg>
   </button>
   <a class="c-header-brand d-lg-none" href="#">
-    <img src="assets/img/logo/cloud-storage-full.svg" alt="OSCloup large" width="118" height="46">
+    <img src="assets/img/logo/svg/cloud-storage-w-full.svg" alt="OSCloup large" width="118" height="46">
   </a>
   <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
     <svg class="c-icon c-icon-lg">

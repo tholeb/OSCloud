@@ -1,7 +1,7 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
       <div class="c-sidebar-brand d-lg-down-none">
-        <img src="assets/img/logo/svg/cloud-storage-w-full.svg" alt="OSCloud large" class="c-sidebar-brand-full" width="118" height="46">
-        <img src="assets/img/logo/svg/cloud-storage-w.svg" alt="OSCloud small" class="c-sidebar-brand-minimized" width="46" height="46">
+        <embed src="assets/img/logo/svg/cloud-storage-w-full.svg" alt="OSCloud large" class="c-sidebar-brand-full" width="118" height="46">
+        <embed src="assets/img/logo/svg/cloud-storage-w.svg" alt="OSCloud small" class="c-sidebar-brand-minimized" width="46" height="46">
       </div>
       <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
