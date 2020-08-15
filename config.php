@@ -10,4 +10,5 @@ if ($_SERVER['HTTP_HOST'] == 'vlife.fr' || $_SERVER['HTTP_HOST'] == 'vlife.thole
 }
 require $aURL.'assets/resources/config/database.php';
 require $aURL.'assets/resources/config/links.php';
+require $aURL.'assets/resources/config/icons.php';
 ?>
