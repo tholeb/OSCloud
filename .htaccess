@@ -1,1 +1,2 @@
-DirectoryIndex index.html index.php default.php .index.php
+Options -Indexes
+RewriteEngine on
