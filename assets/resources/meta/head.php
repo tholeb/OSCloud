@@ -54,6 +54,7 @@
     <meta name="author" content="tholeb">
     <meta name="keyword" content="os,oscloud, osc, yaoscp, cloud, open source">
     <meta name="theme-color" content="#ffffff">
+    <link href="assets/css/coreui.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171569789-1"></script>
     <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NW47QHQ"></script>
