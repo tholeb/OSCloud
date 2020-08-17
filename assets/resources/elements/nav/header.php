@@ -34,49 +34,88 @@
         <div class="c-avatar"><img class="c-avatar-img" src="https://cdn.discordapp.com/avatars/259056305187192833/a949bba73b629a84aa24a8662095eb59" alt="user@email.com"></div>
       </a>
       <div class="dropdown-menu dropdown-menu-right pt-0">
-        <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="#">
+        <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-bell"></use>
-          </svg> Updates<span class="badge badge-info ml-auto">42</span></a><a class="dropdown-item" href="#">
+          </svg> Updates<span class="badge badge-info ml-auto">42</span>
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-envelope-open"></use>
-          </svg> Messages<span class="badge badge-success ml-auto">42</span></a><a class="dropdown-item" href="#">
+          </svg> Messages<span class="badge badge-success ml-auto">42</span>
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-task"></use>
-          </svg> Tasks<span class="badge badge-danger ml-auto">42</span></a><a class="dropdown-item" href="#">
+          </svg> Tasks<span class="badge badge-danger ml-auto">42</span>
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-comment-square"></use>
-          </svg> Comments<span class="badge badge-warning ml-auto">42</span></a>
-        <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div><a class="dropdown-item" href="#">
+          </svg> Comments<span class="badge badge-warning ml-auto">42</span>
+        </a>
+        <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-user"></use>
-          </svg> Profile</a><a class="dropdown-item" href="#">
+          </svg> Profile
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-settings"></use>
-          </svg> Settings</a><a class="dropdown-item" href="#">
+          </svg> Settings
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-credit-card"></use>
-          </svg> Payments<span class="badge badge-secondary ml-auto">42</span></a><a class="dropdown-item" href="#">
+          </svg> Payments<span class="badge badge-secondary ml-auto">42</span>
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-file"></use>
-          </svg> Projects<span class="badge badge-primary ml-auto">42</span></a>
-        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+          </svg> Projects<span class="badge badge-primary ml-auto">42</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-lock-locked"></use>
-          </svg> Lock Account</a><a class="dropdown-item" href="#">
+          </svg> Lock Account
+        </a>
+        <a class="dropdown-item" href="#">
           <svg class="c-icon mr-2">
             <use xlink:href="assets/img/icons/svg/free.svg#cil-account-logout"></use>
-          </svg> Logout</a>
+          </svg> Logout
+        </a>
       </div>
     </li>
   </ul>
   <div class="c-subheader px-3">
-    <!-- Breadcrumb-->
     <ol class="breadcrumb border-0 m-0">
-      <li class="breadcrumb-item">Home</li>
-      <li class="breadcrumb-item"><a href="#">Admin</a></li>
-      <li class="breadcrumb-item active">Dashboard</li>
-      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-item"><a href="<?= $wURL ?>">Home</a></li>
+      <?php
+        if (isset($_GET['dir'])) {
+          $dirs = $_GET['dir'];
+          $dirs = explode("/", $dirs);
+          for ($i=0; $i < count($dirs); $i++) {
+            if ($dirs[$i] == end($dirs)) {
+              ?>
+              <li class="breadcrumb-item active"><?= $dirs[$i] ?></li>
+              <?php
+            } elseif ($dirs[$i] == reset($dirs)) {
+              ?>
+              <li class="breadcrumb-item"><a href="<?= addOrUpdateUrlParam('dir', reset($dirs)) ?>"><?= $dirs[$i] ?></a></li>
+              <?php
+            } else {
+              $numberToRemove = count($dirs) - $i - 1;
+              $imploded = implode("/", array_slice($dirs,0,-$numberToRemove));
+              ?>
+              <li class="breadcrumb-item"><a href="<?= addOrUpdateUrlParam('dir', $imploded) ?>"><?= $dirs[$i] ?></a></li>
+              <?php
+            }
+          }
+        }
+      ?>
     </ol>
   </div>
 </header>
